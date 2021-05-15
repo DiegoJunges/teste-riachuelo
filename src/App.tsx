@@ -1,13 +1,13 @@
-import { ThemeProvider } from 'styled-components';
+import Layout from './components/Layout';
+import ThemeProvider from './context/theme';
 import Routes from './routes';
-import GlobalStyles from './styles/GlobalStyles';
-import dark from './styles/theme/dark';
 
 function App() {
   return (
-    <ThemeProvider theme={dark}>
-      <GlobalStyles />
-      <Routes />
+    <ThemeProvider>
+      <Layout>
+        <Routes />
+      </Layout>
     </ThemeProvider>
   );
 }

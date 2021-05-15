@@ -1,7 +1,13 @@
-const Books = () => {
-  return (
-    <h1>BOOKYS</h1>
-  )
-}
+import { useTheme } from '../../context/theme';
 
-export default Books
+const Books = () => {
+  const { handleToggleTheme } = useTheme();
+
+  return (
+    <button type="button" onClick={handleToggleTheme}>
+      test
+    </button>
+  );
+};
+
+export default Books;

@@ -1,7 +1,5 @@
 const Details = () => {
-  return (
-    <h1>detalhiys</h1>
-  )
-}
+  return <h1>detalhiys</h1>;
+};
 
-export default Details
+export default Details;
