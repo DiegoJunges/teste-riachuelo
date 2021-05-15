@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.colors.body}
   }
 
+  input, button {
+    outline: 0;
+  }
 `;
 
 export default GlobalStyles;
