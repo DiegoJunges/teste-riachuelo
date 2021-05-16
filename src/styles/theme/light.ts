@@ -8,7 +8,7 @@ export default {
     },
     background: {
       primary: '#eef4ed',
-      secondary: '#0b2545',
+      secondary: '#FEFEFE',
     },
   },
 };

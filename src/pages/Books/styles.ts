@@ -34,7 +34,7 @@ export const SearchButton = styled.button`
     border-top-right-radius: 16px;
     border: 1px solid #cccccc30;
     cursor: pointer;
-    background: ${theme.colors.background.secondary};
+    background: #0b2545;
     color: ${theme.colors.background.primary};
     width: 100%;
     max-width: 100px;
