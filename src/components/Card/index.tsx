@@ -1,7 +1,7 @@
 import { FiHeart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import summarizePost from '../../utils/summarizaPost';
-import { Content, Image, Main, Footer } from './styles';
+import { Content, Image, Main, Footer, ButtonFavorite } from './styles';
 
 export type CardProps = {
   id: string;
@@ -10,6 +10,7 @@ export type CardProps = {
   description: string;
   date: string;
   handleFavorite: (id: string) => void;
+  favorite: boolean;
 };
 
 const Card = ({
@@ -18,6 +19,7 @@ const Card = ({
   image,
   title,
   id,
+  favorite,
   handleFavorite,
 }: CardProps) => {
   return (
@@ -35,9 +37,13 @@ const Card = ({
           </div>
           <div>
             <p>Favoritar</p>
-            <button type="button" onClick={() => handleFavorite(id)}>
+            <ButtonFavorite
+              favorite={favorite}
+              type="button"
+              onClick={() => handleFavorite(id)}
+            >
               <FiHeart />
-            </button>
+            </ButtonFavorite>
           </div>
         </Footer>
       </Main>

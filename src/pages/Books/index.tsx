@@ -97,8 +97,9 @@ const Books = () => {
       </main>
       <CardsGroup>
         {!isLoading ? (
-          books.map(({ id, volumeInfo }) => (
+          books.map(({ id, volumeInfo, favorite }) => (
             <Card
+              favorite={favorite}
               handleFavorite={handleFavorite}
               key={id}
               id={id}

@@ -67,3 +67,21 @@ export const Footer = styled.footer`
     } ;
   `}
 `;
+
+type ButtonFavoriteProps = {
+  favorite: boolean;
+};
+
+export const ButtonFavorite = styled.button<ButtonFavoriteProps>`
+  ${({ favorite }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    font-size: 32px;
+    background: transparent;
+    border: 0;
+    color: ${favorite ? '#FA4C58' : '#FFF'};
+  `}
+`;
