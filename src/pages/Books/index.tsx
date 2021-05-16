@@ -1,5 +1,6 @@
+import Card from '../../components/Card';
 import { useTheme } from '../../context/theme';
-import { Content, SearchButton, Search } from './styles';
+import { Content, SearchButton, Search, CardsGroup } from './styles';
 
 const Books = () => {
   const { handleToggleTheme } = useTheme();
@@ -10,6 +11,9 @@ const Books = () => {
         <Search placeholder="Digite aqui" />
         <SearchButton>Pesquisar</SearchButton>
       </main>
+      <CardsGroup>
+        <Card />
+      </CardsGroup>
     </Content>
   );
 };

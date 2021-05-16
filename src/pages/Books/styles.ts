@@ -3,14 +3,15 @@ import styled, { css } from 'styled-components';
 export const Content = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  padding: 0 24px;
   main {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 0 24px;
   }
 `;
 
@@ -31,4 +32,8 @@ export const SearchButton = styled.button`
     width: 100%;
     max-width: 100px;
   `}
+`;
+
+export const CardsGroup = styled.div`
+  ${({ theme }) => css``}
 `;
