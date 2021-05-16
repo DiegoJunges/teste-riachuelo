@@ -81,3 +81,26 @@ export const NextPage = styled.button`
     }
   `}
 `;
+
+export const ToggleButton = styled(SearchButton)`
+  border-radius: 16px;
+  margin-left: 8px;
+  max-width: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+type FavoriteButtonProps = {
+  active: boolean;
+};
+
+export const FavoriteButton = styled(ToggleButton)<FavoriteButtonProps>`
+  ${({ active }) => css`
+    background: ${active ? '#85252C' : '#fa4c58'};
+    &:hover {
+      opacity: 1;
+    }
+  `}
+`;

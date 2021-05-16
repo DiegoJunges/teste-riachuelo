@@ -73,7 +73,7 @@ type ButtonFavoriteProps = {
 };
 
 export const ButtonFavorite = styled.button<ButtonFavoriteProps>`
-  ${({ favorite }) => css`
+  ${({ favorite, theme }) => css`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,6 +82,6 @@ export const ButtonFavorite = styled.button<ButtonFavoriteProps>`
     font-size: 32px;
     background: transparent;
     border: 0;
-    color: ${favorite ? '#FA4C58' : '#FFF'};
+    color: ${favorite ? '#FA4C58' : theme.colors.text.primary};
   `}
 `;
