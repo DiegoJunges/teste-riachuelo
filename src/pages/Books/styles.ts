@@ -46,7 +46,38 @@ export const SearchButton = styled.button`
 `;
 
 export const CardsGroup = styled.div`
-  flex-direction: column;
-  display: flex;
-  gap: 24px;
+  ${({ theme }) => css`
+    flex-direction: column;
+    display: flex;
+    gap: 24px;
+    p {
+      color: ${theme.colors.text.primary};
+    }
+  `}
+`;
+
+export const NextPage = styled.button`
+  ${({ theme }) => css`
+    width: 100%;
+    max-width: 240px;
+    padding: 16px;
+    background: ${theme.colors.background.secondary};
+    color: ${theme.colors.text.primary};
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    svg {
+      font-size: 24px;
+    }
+    margin: 24px 0px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+    &:hover {
+      opacity: 0.7;
+    }
+  `}
 `;
