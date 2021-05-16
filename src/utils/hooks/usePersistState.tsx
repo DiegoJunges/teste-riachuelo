@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { BooksProps } from '../../pages/Books';
 
-function usePersistState(key: string, initialValue: unknown) {
-  const [state, setState] = useState<BooksProps[]>(() => {
+function usePersistState<S>(
+  key: string,
+  initialValue: S,
+): [state: S, setState: React.Dispatch<S>] {
+  const [state, setState] = useState<S>(() => {
     const storageValue = localStorage.getItem(key);
     if (storageValue) {
       return JSON.parse(storageValue);

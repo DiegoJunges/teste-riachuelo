@@ -32,12 +32,18 @@ export type BooksProps = {
 
 const Books = () => {
   const [page, setPage] = useState(0);
-  const [books, setBooks] = useState<BooksProps[]>([]);
+  const [books, setBooks] = usePersistState<BooksProps[]>(
+    '@searchbook:books',
+    [],
+  );
   const [search, setSearch] = useState('');
   const searchRef = useRef<HTMLInputElement>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { handleToggleTheme, theme } = useTheme();
-  const [favorites, setFavorites] = usePersistState('@searchbook:favorite', []);
+  const [favorites, setFavorites] = usePersistState<BooksProps[]>(
+    '@searchbook:favorite',
+    [],
+  );
   const [showFavoriteBooks, setShowFavoriteBooks] = useState(false);
 
   useEffect(() => {
