@@ -1,20 +1,25 @@
 import { FiHeart } from 'react-icons/fi';
+import summarizePost from '../../utils/summarizaPost';
 import { Content, Image, Main, Footer } from './styles';
 
-const Card = () => {
+export type CardProps = {
+  title: string;
+  image: string;
+  description: string;
+  date: string;
+};
+
+const Card = ({ date, description, image, title }: CardProps) => {
   return (
     <Content>
-      <Image src="https://avatars.githubusercontent.com/u/68939012?v=4" />
+      <Image src={image} />
       <Main>
-        <h1>Título</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac magna
-          feugiat aliquet nisl nullam. Ac risus tincidunt nibh lectus...
-        </p>
+        <h1>{summarizePost(title, 100)}</h1>
+        <p>{summarizePost(description, 250)}</p>
         <Footer>
           <div>
             <p>Publicado em</p>
-            <span>10/10/2089</span>
+            <span>{date}</span>
           </div>
           <div>
             <p>Favoritar</p>

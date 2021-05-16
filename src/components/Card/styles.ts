@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Content = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    max-width: 640px;
+    max-width: 840px;
     display: flex;
     background: ${theme.colors.background.secondary};
     border-radius: 16px;
@@ -28,6 +28,7 @@ export const Image = styled.img`
 
 export const Main = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     padding: 24px 24px 0 24px;
     color: ${theme.colors.text.primary};
     @media (max-width: 530px) {
