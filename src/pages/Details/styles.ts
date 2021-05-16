@@ -29,7 +29,8 @@ export const Main = styled.div`
   ${({ theme }) => css`
     flex-direction: column;
     width: 100%;
-    padding: 24px 24px 24px 24px;
+    height: 100%;
+    padding: 24px;
 
     a {
       text-decoration: none;

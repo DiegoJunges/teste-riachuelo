@@ -67,12 +67,7 @@ const Books = () => {
         setIsLoading(false);
       }
     })();
-  }, [page, search]);
-
-  // useEffect(() => {
-  //   const favoriteStorage = localStorage.getItem('@searchbook:favorite');
-  //   setFavorites(JSON.parse(favoriteStorage!));
-  // }, [favorites]);
+  }, [page, search, setBooks]);
 
   const handleFavorite = useCallback(
     (id: string) => {
@@ -82,7 +77,7 @@ const Books = () => {
       setBooks(updatedBooks);
       setFavorites(updatedBooks.filter(item => item.favorite === true));
     },
-    [books, setFavorites],
+    [books, setFavorites, setBooks],
   );
 
   const handleChangePage = () => {
