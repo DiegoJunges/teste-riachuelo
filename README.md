@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+## Como rodar o projeto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+No diretório do projeto rode:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Inicia o projeto em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para ver o projeto no navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como usar a aplicação:
 
-### `yarn test`
+No input de pesquisa digite o nome do livro desejado, ou então palavras relacionadas com a busca desejada e clique em pesquisar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ao lado do input de pesquisa existe dois botões, um é para mudar o entre o modo light e dark(ícone de sol e lua que variam ao clicque o usuário) e o outro botão é para mostrar os livros favoritados, só irá aparecer em tela os livros favoritados, caso o usuário não tenha nunhum livro favoritado, nenhum resultado aparecerá.
 
-### `yarn build`
+Após a pesquisa, aparecerá uma lista de livros, o usuário poderá favoritar/desfavoritar clicando no ícone do coração no card do livro, o usuário poderá listar todos os favoritados clicando no botão com ícone de coração que fica ao lado do input de pesquisa e ao desfavoritar ele irá retira o respectivo resultado da lista de favoritos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O usuário também poderá clicar no título ou na descrição do card do livro e acessar a descrição mais detalhada do respectivo livro.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A aplicação possue paginação para melhor navegação do usuário.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+A Aplicação possue responsividade podendo ser acessada de dispositivos móveis.
